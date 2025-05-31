@@ -1,11 +1,24 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
-    height: 10000px;
+    background-color: rgb(236, 236, 236);
 }
 button{
     text-align: center;
     align-items: center;
+    cursor: pointer;
 }
+h1{
+    text-align: center;
+}
+.func-button{
+    background-color: rgba(127, 255, 212, 0.274);
+    border-style: solid;
+    border-color: aquamarine;
+    border-radius: 12%;
+    padding: 1% 2%;
+}
+
+
 #main-header{
     display: grid;
     grid-template-columns: min-content 1fr; 
@@ -14,6 +27,8 @@ button{
     border-bottom-style: solid;
     position: fixed;
     top: 0;
+    right: 0;
+    left: 0;
     padding-top: 4px;
     width: 100vw;
     z-index: 100;
@@ -31,9 +46,10 @@ button{
 }
 #menu{
     display: grid;
-    grid-template-columns: 1fr 1fr 2fr 2fr;
+    grid-template-columns: 1fr 0.5fr 2fr 2fr;
     justify-content: space-between;
 }
+#search,
 #information,
 #main-bar,
 #account{
@@ -43,6 +59,7 @@ button{
     justify-items: center;
     align-items: end;
 }
+#search *:hover,
 #main-bar *:hover,
 #account .account-button:hover,
 #information *:hover{
@@ -58,19 +75,7 @@ button{
     text-underline-offset: 4px;
     text-decoration-thickness: 4px;
 }
-#search{
-    display: grid;
-    grid-auto-columns: 90% 10%;
-    grid-auto-flow: column;
-    align-items: end;
-}
-#search input:focus{
-    outline-color: aquamarine;
-}
-#fast-search img,
-#search img{
-    width: 12px;
-}
+
 
 #content{
     margin: 64px 10vw 0 10vw;
@@ -78,19 +83,49 @@ button{
 #content .element{
     margin-bottom: 1vw;
 }
+#image-content,
+#fast-search,
+#search-form,
+#tops,
+#facts,
+#sub-news{
+    background-color: white;
+    padding: 2%;
+    border-radius: 4%;
+}
+
+
 #fast-search{
-    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
 }
-#fast-search input{
-    width: 16vw;
+#fast-search-input{
+    display: block;
+    width: 736px;
+    height: 40px;
+    font-size: 20px;
 }
+#fast-search-input:focus{
+    display: block;
+    outline-color: aquamarine;
+}
+#search-block button{
+    width: 736px;
+    background-color: rgba(127, 255, 212, 0.274);
+    border-style: solid;
+    border-color: aquamarine;
+}
+
+
+
 #place{
    display: grid;
    grid-template-columns: 1fr 3fr;
     grid-template-areas:
     "search content"
     ". tops";
-
+    gap: 1vw;
 }
 #image-content{
     grid-area: content;
@@ -100,6 +135,213 @@ button{
 }
 #search-form{
     grid-area: search;
+    align-self: start;
+    padding-bottom: 4%;
+}
+#search-form input:focus{
+    outline-color: aquamarine;
+}
+#search-form input:hover{
+    cursor: pointer;
+}
+#search-form button{
+    width: 90%;
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+}
+#search-form p{
+    margin-bottom: 0;
+}
+
+#slides{
+    display: grid;
+    grid-template-areas:
+    "one two three";
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    height: 28vw;
+    border-style: solid;
+    border-width: 4px;
+    border-color: black;
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+}
+.slide{
+    display: none;
+    position: relative;
+    text-align: center;
+}
+.top-img,
+.slide-img{
+    height: 46%;
+    overflow: hidden;
+}
+.top-img img,
+.slide-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.slide button{
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    left: 0;
+}
+.first-slide,
+.third-slide{
+    text-align: center;
+    display: block;
+    height: 18vw;
+    border-style: solid;
+    border-width: 4px 0 4px 0;
+    border-color: aquamarine;
+    padding: 0 4px;
+}
+.first-slide{
+    grid-area: one;
+}
+.third-slide{
+    grid-area: three;
+}
+.second-slide{
+    grid-area: two;
+    text-align: center;
+    display: block;
+    border-style: solid;
+    border-color: aquamarine;
+    border-width: 4px;
+    height: calc(28vw - 8px);
+    background-color: rgba(127, 255, 212, 0.274);
+    padding: 0 4px;
+}
+
+#slider-buttons{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+#back-button,
+#next-button{
+    padding: 2% 2%;
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(127, 255, 212, 0.274);
+    border-style: solid;
+    border-color: aquamarine;
+}
+#back-button{
+    left: 0;
+    border-width: 2px 2px 0 0;
+}
+#next-button{
+    right: 0;
+    border-width: 2px 0 0 2px;
+}
+#counter{
+    justify-self: center;
+    font-size: 30px;
+}
+
+#tops #grid-tops{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.hotel-in-top{
+    margin: -4px -2px;
+    border-style: solid;
+    border-width: 4px;
+    border-color: aquamarine;
+    background-color: white;
+    padding: 4px;
+    text-align: center;
+    position: relative;
+}
+.hotel-in-top h3{
+    border-top-style: solid;
+    border-top-width: 2px;
+    border-top-color: aquamarine;
+}
+.hotel-in-top button{
+    position: absolute;
+    bottom: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+#facts-grid .node{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "one two";
+    border-style: solid;
+    border-width: 4px 0 4px 0;
+    border-color: aquamarine;
+    padding: 8px 0 8px 0;
+    margin-bottom: -4px;
+    column-gap: 2%;
+}
+#facts-grid .one{
+    grid-area: one;
+    text-align: end;
+}
+#facts-grid p{
+    font-size: large;
+}
+#facts-grid .two{
+    grid-area: two;
+}
+#facts-grid img {
+    width: 60%;
+}
+
+#sub-news h2{
+    border-bottom-style: solid;
+    border-bottom-width: 4px;
+    border-bottom-color: aquamarine;
+}
+#reg-news-form{
+    text-align: center;
+}
+
+
+#under{
+    border-top-style: solid;
+    border-top-width: 4px;
+    border-top-color: black;
+    background-color: white;
+    position: absolute;
+    right: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 20%;
+    padding: 1% 1%;
+    padding-bottom: 2%;
+}
+#under a{
+    text-decoration: none;
+    color: black;
+}
+#under h4{
+    text-align: center;
+    margin: 0;
+    margin-bottom: 1%;
+}
+#under-info,
+#under-nav{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    text-align: center;
+    grid-auto-flow: column;
+}
+#under-info{
+
 }
 
 @media (max-width: 768px) {

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/style.css">
-    <title>Document</title>
+    <title>Home</title>
 </head>
 <body>
     <header id="main-header">
@@ -15,8 +15,7 @@
                 <div>Задать вопрос</div>
             </div>
             <div id="search">
-                <input type="text" placeholder="Поиск...">
-                <button><img src="./img/search.png" alt=""></button>
+                <a href="./pages/search.html">Поиск</a>
             </div>
             <div id="main-bar">
                 <div>Избранное</div> 
@@ -24,43 +23,247 @@
                 <div>Мои заказы</div>
             </div>
             <div id="account">
-                <div><a href="">Регистрации</a> / <a href="">Войти</a></div>
-                <div class="account-button"><a href="">Личный кабинет</a></div>
+                <div><a href="./pages/register.html">Регистрации</a> / <a href="./pages/login.html">Войти</a></div>
+                <div class="account-button"><a href="./pages/profile.html">Личный кабинет</a></div>
                 <div class="account-button">Уведомления</div>
             </div>
         </div>
     </header>
     <div id="content">
         <div class="element" id="fast-search">
-            <input type="text" placeholder="Поиск...">
-            <button><img src="./img/search.png" alt=""></button>
+            <h1>Наиболее быстрый поиск из всех возможных!</h1>
+            <div id="search-block">
+                <input id="fast-search-input" type="search" placeholder="Поиск..." list="fast-search-list">
+                <button>Найти!</button>
+                <datalist id="fast-search-list">
+                    <option value="Домик Шрека">
+                    <option value="Трансильванский отель">
+                    <option value="ходячий замок"></option>
+                    <option value="Подсобка Гарри Поттера"></option>
+                </datalist>
+            </div>
         </div>
         <div class="element" id="place">
             <div id="search-form">
-                <button>Найти!</button>
-                <p>Страна и город</p>
-                <input type="text" placeholder="Введите город и страну...">
-                <p>Заезд:</p>
-                <input type="date">
-                <p>Выезд:</p>
-                <input type="date">
-                <p>Количество гостей:</p>
-                <input type="number">
+                <h1>Заморочиться с поиском!</h1>
+                <button class="func-button">Найти!</button>
+                <p>Страна и город: <input type="text" placeholder="Введите город и страну..."></p>
+                <p>Заезд: <input type="date"></p>
+                <p>Выезд: <input type="date"></p>
+                <p>Количество гостей: <input style="width: 40px;" type="number" min="1" placeholder="..."></p>
             </div>
             <div id="image-content">
-                image-content
+                <h1>Топ 10 отелей России!</h1>
+                <div id="slider">
+                    <div id="slides">
+                        <div class="slide">
+                            <div class="slide-img">
+                                <img src="./pictures/top-ten/castle.jpg" alt="">
+                            </div>
+                            <h3>Ходячий замок</h3>
+                            <p>Я не смотрел, я хз</p>
+                            <button class="func-button">Подробнее</button>
+                        </div>
+                        <div class="slide">
+                            <div class="slide-img">
+                                <img src="./pictures/top-ten/transilvania.jpg" alt="">
+                            </div>
+                            <h3>Отель Трансильванский</h3>
+                            <p>Очень уютный, добрый персонал, много свежей крови.</p>
+                            <button class="func-button">Подробнее</button>
+                        </div>
+                        <div class="slide">
+                            <div class="slide-img">
+                                <img src="./pictures/top-ten/izba.jpg" alt="">
+                            </div>
+                            <h3>Избушка на курьих ножках</h3>
+                            <p>Кормят кашей из топора, хозяйка яга!</p>
+                            <button class="func-button">Подробнее</button>
+                        </div>
+                        <div class="slide">
+                            <div class="slide-img">
+                                <img src="./pictures/top-ten/shreck-house.jpg" alt="">
+                            </div>
+                            <h3>Домик на болоте</h3>
+                            <p>Очень тихо, прекрасный туалет и огры</p>
+                            <button class="func-button">Подробнее</button>
+                        </div>
+                        <div class="slide">
+                            <div class="slide-img">
+                                <img src="./pictures/top-ten/corob.jpg" alt="">
+                            </div>
+                            <h3>Коробка</h3>
+                            <p>Лучше чем общежитие при колледже</p>
+                            <button class="func-button">Подробнее</button>
+                        </div>
+                        <div class="slide">
+                            <div class="slide-img">
+                                <img src="./pictures/top-ten/foster.jpg" alt="">
+                            </div>
+                            <h3>Дом фостер</h3>
+                            <p>Подходит для весёлой жизни</p>
+                            <button class="func-button">Подробнее</button>
+                        </div>
+                        <div class="slide">
+                            <div class="slide-img">
+                                <img src="./pictures/top-ten/fufel.jpg" alt="">
+                            </div>
+                            <h3>Башня фуфелшмерца</h3>
+                            <p>Трепещи Перри утконос, я создал СайтоСоздавательИнатор!</p>
+                            <button class="func-button">Подробнее</button>
+                        </div>
+                        <div class="slide">
+                            <div class="slide-img">
+                                <img src="./pictures/top-ten/garry.jpg" alt="">
+                            </div>
+                            <h3>Чулан Гарри Поттера</h3>
+                            <p>Волшебное место и совятина на завтрак</p>
+                            <button class="func-button">Подробнее</button>
+                        </div>
+                        <div class="slide">
+                            <div class="slide-img">
+                                <img src="./pictures/top-ten/griffin.jpg" alt="">
+                            </div>
+                            <h3>Обычный дом</h3>
+                            <p>Дом у дороги!</p>
+                            <button class="func-button">Подробнее</button>
+                        </div>
+                        <div class="slide">
+                            <div class="slide-img">
+                                <img src="./pictures/top-ten/minecraft.jpg" alt="">
+                            </div>
+                            <h3>Стартовый дом</h3>
+                            <p>Безопасно, недорого и уютно</p>
+                            <button class="func-button">Подробнее</button>
+                        </div>
+                        <div id="slider-buttons">
+                            <button id="back-button">back</button>
+                            <button id="next-button">next</button>
+                        </div>
+                    </div>
+                    <div id="counter"></div>
+                </div>
             </div>
             <div id="tops">
-                tops
+                <h1>Популярное сейчас</h1>
+                <div id="grid-tops">
+                   <div class="hotel-in-top">
+                        <div class="top-img">
+                            <img src="./pictures/top-ten/castle.jpg" alt="">
+                        </div>
+                        <h3>Ходячий замок</h3>
+                        <p>Я не смотрел, я хз</p>
+                        <button class="func-button">Подробнее</button>
+                   </div>
+                   <div class="hotel-in-top">
+                        <div class="top-img">
+                            <img src="./pictures/top-ten/minecraft.jpg" alt="">
+                        </div>
+                        <h3>Стартовый дом</h3>
+                        <p>Безопасно,недорого и уютно</p>
+                        <button class="func-button">Подробнее</button>
+                   </div>
+                   <div class="hotel-in-top">
+                        <div class="top-img">
+                            <img src="./pictures/top-ten/izba.jpg" alt="">
+                        </div>
+                        <h3>Избушка на курьих ножках</h3>
+                        <p>Кормят кашей из топора, хозяйка яга!</p>
+                        <button class="func-button">Подробнее</button>
+                   </div>
+                   <div class="hotel-in-top">
+                        <div class="top-img">
+                            <img src="./pictures/top-ten/corob.jpg" alt="">
+                        </div>
+                        <h3>Коробка</h3>
+                        <p>Лучше чем общежитие при колледже</p>
+                        <button class="func-button">Подробнее</button>
+                   </div>
+                   <div class="hotel-in-top">
+                        <div class="top-img">
+                            <img src="./pictures/top-ten/fufel.jpg" alt="">
+                        </div>
+                        <h3>Башня фуфелшмерца</h3>
+                        <p>Трепещи Перри утконос, я создал СайтоСоздавательИнатор!</p>
+                        <button class="func-button">Подробнее</button>
+                   </div>
+                   <div class="hotel-in-top">
+                        <div class="top-img">
+                            <img src="./pictures/top-ten/shreck-house.jpg" alt="">
+                        </div>
+                        <h3>Домик на болоте</h3>
+                        <p>Очень тихо, прекрасный туалет и огры</p>
+                        <button class="func-button">Подробнее</button>
+                   </div>
+                </div>
             </div>
         </div>
         <div class="element" id="facts">
-            facts
+            <h1>О нас:</h1>
+            <div id="facts-grid">
+                <div class="node">
+                    <div class="one">
+                        <h2>Низкие цены.</h2>
+                        <p>Реально низкие цены, прям капец какие!</p>
+                    </div>
+                    <div class="two">
+                        <img src="./pictures/pluse/takeMyMoney.jpeg" alt="sorry">
+                    </div>
+                </div>
+                <div class="node">
+                    <div class="two">
+                        <h2>Отели по всей стране.</h2>
+                        <p>Даже в Крыму!</p>
+                    </div>
+                    <div class="one">
+                        <img src="./pictures/pluse/russia.jpg" alt="sorry">
+                    </div>
+                </div>
+                <div class="node">
+                    <div class="one">
+                        <h2>Заботливая поддержка 24/7.</h2>
+                        <p>Поможет даже с переустановкой Windows!</p>
+                    </div>
+                    <div class="two">
+                        <img src="./pictures/pluse/support.jpg" alt="sorry">
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="element" id="sub-news">
-            sub-news
+            <h1>Хотите получать самые свежие новости от нас?</h1>
+            <h2 style="text-align: center;">Тогда заполните эту форму!</h2>
+            <div id="reg-news-form">
+                <p>Email: <input type="email"></p>
+                <p>Я даю согласие на обработку персональных данных <input type="checkbox"></p>
+                <button class="func-button">Подписаться</button>
+            </div>
         </div>
     </div>
-    <div id="under"></div>
+    <div id="under">
+        <div>
+            <h4>Навигация по сайту:</h4>
+            <div id="under-nav">
+                <a href="">Главная</a>
+                <a href="">Регистрация</a>
+                <a href="">Авторизация</a>
+                <a href="">Личный кабинет</a>
+                <a href="">Поиск</a>
+                <a href="">Задать вопрос</a>
+            </div>
+        </div>
+        <div>
+            <h4>Информация:</h4>
+            <div id="under-info">
+                <a href="">Контакты</a>
+                <a href="">Телефон (8-800-777-55-77)</a>
+                <a href="">e-mail: hotel@hotel.ru</a>
+                <a href="">О нас</a>
+                <a href="">Клиентам</a>
+                <a href="">Партнерам</a>
+            </div>
+        </div>
+    </div>
+    <script src="./scripts/slider.js"></script>
 </body>
 </html>
