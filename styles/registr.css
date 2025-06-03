@@ -1,0 +1,103 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(236, 236, 236);
+    position: relative;
+}
+.user-form{
+    position: absolute;
+    width: 400px;
+    padding: 20px;
+    background-color: white;
+    border-style: solid;
+    border-width: 4px;
+    border-radius: 3%;
+    font-size: large;
+    top: calc(50vh - 415px);
+    left: calc(50vw - 224px);
+    display: flex;
+    flex-direction: column;
+}
+.user-form h1{
+    margin: 0;
+    width: 400px;
+    margin-bottom: 21px;
+    text-align: center;
+    border-bottom-width: 2px;
+    border-bottom-color: aquamarine;
+    border-bottom-style: solid;
+}
+.user-form p{
+    margin: 20px 0 10px 0;
+    font-size: 24px;
+}
+.user-form span{
+    display: inline;
+    color: red;
+}
+.user-form input{
+    height: 30px;
+    font-size: 24px;
+}
+.user-form input:hover{
+    border-style: solid;
+    background-color: rgba(127, 255, 212, 0.274);
+}
+.user-form input:focus{
+    outline-color: aquamarine;
+    background-color: rgba(127, 255, 212, 0.274);
+}
+.reg-button{
+    margin-top: 20px;
+    height: 36px;
+    border-style: solid;
+    border-radius: 12px;
+    border-color: aquamarine;
+    border-width: 2px;
+    font-size: 24px;
+    background-color: rgba(127, 255, 212, 0.274);
+    opacity: 0.5;
+}
+.go-button{
+    opacity: 1;
+}
+.quit-button:hover,
+.go-button:hover{
+    filter: brightness(0.9);
+}
+.quit-button:active,
+.go-button:active{
+    filter: brightness(1)
+}
+.quit-button{
+    height: 36px;
+    width: 180px;
+    border-style: solid;
+    border-radius: 12px;
+    border-color: aquamarine;
+    border-width: 2px;
+    font-size: 24px;
+    background-color: rgba(127, 255, 212, 0.274);
+}
+.access{
+    display: flex;
+}
+.required-field-checkbox[type="checkbox"]{
+    accent-color: aquamarine;
+    align-self: center;
+}
+#message{
+    position: absolute;
+    font-size: 30px;
+    top: calc(50vh + 415px);
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+.error{
+    color: red;
+    font-size: medium;
+}
+.good{
+    color: green;
+    font-size: x-large;
+}

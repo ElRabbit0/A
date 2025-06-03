@@ -2,10 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=0.6">
+    <link rel="stylesheet" href="../styles/registr.css">
+    <title>Register</title>
 </head>
 <body>
-    
+    <a href="../index.html"><button class="quit-button">Назад</button></a>
+    <div class="user-form">
+        <h1>Зарегистрироваться</h1>
+        <p><span>*</span>Почта: </p>
+        <input class="required-field" type="email" placeholder="Крутая_почта@почта.com...">
+        <p><span>*</span>Имя: </p>
+        <input class="required-field" type="text" placeholder="Вася...">
+        <p>Фамилия: </p>
+        <input type="text" placeholder="Пупкин...">
+        <p><span>*</span>Телефон: </p>
+        <input class="required-field" type="tel" placeholder="+7...">
+        <p><span>*</span>Пароль: </p>
+        <input id="password" class="required-field" type="password" placeholder="12345">
+        <p><span>*</span>Повторите пароль: </p>
+        <input id="passwordRet" class="required-field" type="password" placeholder="12345">
+        <p class="access"><span>*</span>Подтверждение на обработку персональных данных <input class="required-field-checkbox" type="checkbox"></p>
+        <button class="reg-button">Зарегистрироваться</button>
+    </div>
+    <div id="message">
+
+    </div>
+    <script src="../scripts/registr.js"></script>
 </body>
 </html>
