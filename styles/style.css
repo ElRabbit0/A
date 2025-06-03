@@ -20,7 +20,7 @@ h1{
     background-color: rgba(127, 255, 212, 0.274);
     border-style: solid;
     border-color: aquamarine;
-    border-radius: 12%;
+    border-radius: 1vw;
     padding: 1% 2%;
 }
 
@@ -97,7 +97,7 @@ h1{
 #sub-news{
     background-color: white;
     padding: 2%;
-    border-radius: 4%;
+    border-radius: 1vw;
 }
 
 
@@ -328,7 +328,6 @@ h1{
     grid-template-columns: 1fr 1fr;
     row-gap: 20%;
     padding: 1% 1%;
-    padding-bottom: 2%;
 }
 #under a{
     text-decoration: none;
@@ -346,8 +345,17 @@ h1{
     text-align: center;
     grid-auto-flow: column;
 }
-#under-info{
-
+#under-info *,
+#under-nav *{
+    margin-bottom: 4px;
+}
+#under-info *:hover,
+#under-nav *:hover{
+    text-decoration: underline;
+    text-decoration-color: aquamarine;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 4px;
+    cursor: pointer;
 }
 
 @media (max-width: 768px) {
