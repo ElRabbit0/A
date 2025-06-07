@@ -2,32 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./styles/style.css">
     <title>Home</title>
 </head>
 <body>
     <header id="main-header">
         <div id="logo"><img src="./img/logo.png" alt="logo"></div>
+        <div id="tel">8-800-777-55-77</div>
         <div id="menu">
-            <div id="information">
-                <div>8-800-777-55-77</div>
-                <div>Задать вопрос</div>
+            <div id="burger-button">
+                <img src="./img/burger-icon.png" alt="">
             </div>
-            <div id="search">
-                <a href="./pages/search.html">Поиск</a>
-            </div>
-            <div id="main-bar">
-                <div>Избранное</div> 
-                <div>Бронирования</div>
-                <div>Мои заказы</div>
-            </div>
-            <div id="account">
-                <div><a href="./pages/register.html">Регистрации</a> / <a href="./pages/login.html">Войти</a></div>
-                <div class="account-button"><a href="./pages/profile.html">Личный кабинет</a></div>
-                <div class="account-button">Уведомления</div>
-            </div>
+                <div id="main">
+                    <div id="information">
+                        <div>Задать вопрос</div>
+                    </div>
+                    <div id="search">
+                        <a href="./pages/search.html">Поиск</a>
+                    </div>
+                    <div id="main-bar">
+                        <div>Избранное</div> 
+                        <div>Бронирования</div>
+                        <div>Мои заказы</div>
+                    </div>
+                    <div id="account">
+                        <div><a href="./pages/register.html">Регистрации</a> / <a href="./pages/login.html">Войти</a></div>
+                        <div class="account-button"><a href="./pages/profile.html">Личный кабинет</a></div>
+                        <div class="account-button">Уведомления</div>
+                    </div>
+                </div>
         </div>
+    </header>
+    <header id="main-header-mobile">
+
     </header>
     <div id="content">
         <div class="element" id="fast-search">
@@ -137,8 +145,8 @@
                             <button class="func-button">Подробнее</button>
                         </div>
                         <div id="slider-buttons">
-                            <button id="back-button">back</button>
-                            <button id="next-button">next</button>
+                            <button id="back-button">«</button>
+                            <button id="next-button">»</button>
                         </div>
                     </div>
                     <div id="counter"></div>

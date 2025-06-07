@@ -1,3 +1,7 @@
+:root{
+    --main-color: aquamarine;
+    --main-color-back: rgba(127, 255, 212, 0.274);
+}
 body{
     font-family: Arial, Helvetica, sans-serif;
     background-color: rgb(236, 236, 236);
@@ -17,17 +21,19 @@ h1{
     text-align: center;
 }
 .func-button{
-    background-color: rgba(127, 255, 212, 0.274);
+    background-color: var(--main-color-back);
     border-style: solid;
     border-color: aquamarine;
     border-radius: 1vw;
     padding: 1% 2%;
 }
 
-
+#burger-button{
+    display: none;
+}
 #main-header{
     display: grid;
-    grid-template-columns: min-content 1fr; 
+    grid-template-columns: min-content min-content 1fr; 
     gap: 1vw;
     padding-bottom: 0.5vh;
     border-bottom-style: solid;
@@ -40,6 +46,9 @@ h1{
     z-index: 100;
     background-color: white;
 }
+#tel{
+    white-space: nowrap;
+}
 #main-header a {
     text-decoration: none;
     color: black;
@@ -47,14 +56,20 @@ h1{
 #logo{
     justify-content: center;
 }
+#burger-button img,
 #logo img{
     width: 32px;
 }
 #menu{
     display: grid;
-    grid-template-columns: 1fr 0.5fr 2fr 2fr;
+    align-items: end;
+}
+#main{
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr 2fr 2fr;
     justify-content: space-between;
 }
+#tel,
 #search,
 #information,
 #main-bar,
@@ -65,19 +80,20 @@ h1{
     justify-items: center;
     align-items: end;
 }
+#tel:hover,
 #search *:hover,
 #main-bar *:hover,
 #account .account-button:hover,
 #information *:hover{
     text-decoration: underline;
-    text-decoration-color: aquamarine;
+    text-decoration-color: var(--main-color);
     text-underline-offset: 4px;
     text-decoration-thickness: 4px;
     cursor: pointer;
 }
 #account a:hover{
     text-decoration: underline;
-    text-decoration-color: aquamarine;
+    text-decoration-color: var(--main-color);
     text-underline-offset: 4px;
     text-decoration-thickness: 4px;
 }
@@ -118,9 +134,9 @@ h1{
 }
 #search-block button{
     width: 736px;
-    background-color: rgba(127, 255, 212, 0.274);
+    background-color: var(--main-color-back);
     border-style: solid;
-    border-color: aquamarine;
+    border-color: var(--main-color);
 }
 
 
@@ -145,7 +161,7 @@ h1{
     padding-bottom: 4%;
 }
 #search-form input:focus{
-    outline-color: aquamarine;
+    outline-color: var(--main-color);
 }
 #search-form input:hover{
     cursor: pointer;
@@ -203,7 +219,7 @@ h1{
     height: 18vw;
     border-style: solid;
     border-width: 4px 0 4px 0;
-    border-color: aquamarine;
+    border-color: var(--main-color);
     padding: 0 4px;
 }
 .first-slide{
@@ -217,10 +233,10 @@ h1{
     text-align: center;
     display: block;
     border-style: solid;
-    border-color: aquamarine;
+    border-color: var(--main-color);
     border-width: 4px;
     height: calc(28vw - 8px);
-    background-color: rgba(127, 255, 212, 0.274);
+    background-color: var(--main-color-back);
     padding: 0 4px;
 }
 
@@ -235,9 +251,9 @@ h1{
     padding: 2% 2%;
     position: absolute;
     bottom: 0;
-    background-color: rgba(127, 255, 212, 0.274);
+    background-color: var(--main-color-back);
     border-style: solid;
-    border-color: aquamarine;
+    border-color: var(--main-color);
 }
 #back-button{
     left: 0;
@@ -260,7 +276,7 @@ h1{
     margin: -4px -2px;
     border-style: solid;
     border-width: 4px;
-    border-color: aquamarine;
+    border-color: var(--main-color);
     background-color: white;
     padding: 4px;
     text-align: center;
@@ -269,12 +285,16 @@ h1{
 .hotel-in-top h3{
     border-top-style: solid;
     border-top-width: 2px;
-    border-top-color: aquamarine;
+    border-top-color: var(--main-color);
+}
+.hotel-in-top p{
+    margin-bottom: 50px;
+    margin-top: -10px;
+    word-break:break-all;
 }
 .hotel-in-top button{
     position: absolute;
     bottom: 0;
-    position: absolute;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -287,7 +307,7 @@ h1{
     "one two";
     border-style: solid;
     border-width: 4px 0 4px 0;
-    border-color: aquamarine;
+    border-color: var(--main-color);
     padding: 8px 0 8px 0;
     margin-bottom: -4px;
     column-gap: 2%;
@@ -309,7 +329,7 @@ h1{
 #sub-news h2{
     border-bottom-style: solid;
     border-bottom-width: 4px;
-    border-bottom-color: aquamarine;
+    border-bottom-color: var(--main-color);
 }
 #reg-news-form{
     text-align: center;
@@ -352,14 +372,124 @@ h1{
 #under-info *:hover,
 #under-nav *:hover{
     text-decoration: underline;
-    text-decoration-color: aquamarine;
+    text-decoration-color: var(--main-color);
     text-underline-offset: 4px;
     text-decoration-thickness: 4px;
     cursor: pointer;
 }
 
 @media (max-width: 768px) {
-    #content{
+    #main-header{
+        padding: 0.5vh 4px;
+        width: calc(100vw - 8px);
+    }
+    #tel{
+        align-items: center;
+    }
+    #menu{
+        display: flex;
+        justify-self: end;
+    }
+    #main{
         display: none;
+    }
+    #burger-button{
+        display: flex;
+    }
+    #menu:hover #main,
+    #main:hover{
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        top: 54px;
+        padding-top: 4px;
+        left: 0;
+        right: 0;
+        background-color: white;
+        border-bottom-style: solid;
+        margin-top: -4px;
+    }
+    #main-bar,
+    #account{
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+    }
+    #main div:not(#information, #main-bar, #account){
+        padding-bottom: 8px;
+        border-top-style: solid;
+        width: 100%;
+        text-align: center;
+        padding-top: 8px;
+    }
+    #main div:not(#information, #main-bar, #account):active{
+        background-color: var(--main-color-back)
+    }
+    #search *:hover,
+    #main-bar *:hover,
+    #account .account-button:hover,
+    #information *:hover{
+        text-decoration: none;
+    }
+
+    #content{
+        margin: 64px 1vw 0 1vw;
+    }
+    #content .element,
+    #search-form,
+    #image-content{
+        margin-bottom: 4vw;
+    }
+    #fast-search-input{
+        width: 70vw;
+    }
+    #search-block button{
+        width: 70vw;
+    }   
+    #place{
+        display: flex;
+        flex-direction: column;
+    }
+    #slides{
+        height: 48vh;
+        display: flex;
+        justify-content: center;
+    }
+    .first-slide,
+    .third-slide{
+        display: none;
+    }
+    .second-slide{
+        grid-area: two;
+        text-align: center;
+        display: block;
+        border-style: solid;
+        border-color: var(--main-color);
+        border-width: 4px;
+        height: calc(48vh - 8px);
+        width: 70%;
+        background-color: var(--main-color-back);
+        padding: 0 4px;
+    }
+    #slider-buttons{
+        height: 100%;
+    }
+    #back-button,
+    #next-button{
+        width: calc(15% - 4px);
+        height: 100%;
+    }
+
+    #tops #grid-tops{
+        grid-template-columns: repeat(2, 50%);
+    }
+    #facts-grid img {
+        width: 100%;
+    }
+    #under-info,
+    #under-nav{
+        display: flex;
+        flex-direction: column;
+        word-break: break-all;
     }
 }
