@@ -3,6 +3,9 @@ body{
     background-color: rgb(236, 236, 236);
     position: relative;
 }
+button{
+    cursor: pointer;
+}
 button:hover{
     filter: brightness(0.9);
 }
@@ -46,4 +49,135 @@ button:active{
 #information p .func-button{
     margin-bottom: 0;
     padding: 4px;
+}
+#for-free,
+#paid{
+    border-bottom-color: aquamarine;
+    border-bottom-style: solid;
+    border-bottom-width: 4px;
+}
+#for-free div,
+#paid div{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    white-space: dot;
+}
+#for-free a,
+#paid a{
+    text-decoration: underline dotted;
+    color: black
+}
+#for-free p,
+#paid p{
+   border: none;
+   margin: 0px;
+}
+#booked{
+    padding-top: 20px;
+    border-bottom-color: aquamarine;
+    border-bottom-style: solid;
+    border-bottom-width: 4px;
+}
+#booked h2{
+    text-align: center;
+}
+#booked-place{
+    display: grid;
+    grid-template-columns: calc(50% + 1px) calc(50% - 1px);
+    column-gap: 2px;
+}
+#confirmed,
+#not-confirmed{
+    display: grid;
+    grid-template-columns: 1fr;
+    align-self: start;
+    justify-items: center;
+    overflow-x: hidden;
+}
+#confirmed h3,
+#not-confirmed h3{
+    text-align: center;
+    width: 180px;
+    border-radius: 1vw;
+    border: none;
+    padding: 4px 0;
+}
+#confirmed p,
+#not-confirmed p{
+    border-color: black;
+    border-bottom-style: dotted;
+    margin-right: 4px;
+}
+#confirmed{
+    border-right-color: black;
+    border-right-width: 2px;
+    border-right-style: dotted;
+}
+#not-confirmed{
+    border-left-color: black;
+    border-left-width: 2px;
+    border-left-style: dotted;
+    margin-left: -4px;
+}
+#confirmed .node{
+    background-color: rgba(0, 128, 0, 0.212);
+}
+#not-confirmed .node{
+    background-color: rgba(128, 0, 0, 0.212);
+}
+#confirmed h3{
+    background-color: green;
+}
+#not-confirmed h3{
+    background-color: red;
+}
+.node{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    padding: 8px 4px;
+    margin-bottom: 8px;
+    width: 100%;
+}
+.img-node{
+    margin-right: 8px;
+    margin-bottom: 4px;
+    align-self: start;
+}
+.img-node,
+.img-node img{
+    height: 200px;
+    overflow: hidden;
+}
+.edit-button,
+.del-button{
+    border-radius: 1vw;
+    border: none;
+    padding: 4px 4px;
+    align-self: start;
+}
+.edit-button{
+    background-color: aquamarine;
+}
+.del-button{
+    background-color: red;
+}
+@media (max-width: 768px){
+    #information p span,
+    #hotels p span{
+        display: block;
+    }
+    #booked-place{
+        grid-template-columns: 1fr;
+    }
+    #confirmed{
+        border-right: none;
+    }
+    #not-confirmed{
+        border-left: none;
+        margin-left: 0;
+    }
+    .img-node{
+        display: flex;
+    }
 }
