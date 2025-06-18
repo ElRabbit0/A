@@ -24,17 +24,19 @@ function register(){
     allGood = true;
     errorAnaliz();
     message.innerHTML= '';
-    if(allGood)
-    {
-        textmessage.push('Успешно!');
-        message.innerHTML+= `<p class='good'>${textmessage[0]}</p>`;
-        setTimeout(()=>{location.href='../index.html'}, 2000)
-    }
-    else
-    {
-        for(elem of textmessage)
+    if(checkbox.checked){
+        if(allGood)
         {
-            message.innerHTML+= `<p class='error'>${elem}</p>`;
+            textmessage.push('Успешно!');
+            message.innerHTML+= `<p class='good'>${textmessage[0]}</p>`;
+            setTimeout(()=>{location.href='../index.html'}, 2000)
+        }
+        else
+        {
+            for(elem of textmessage)
+            {
+                message.innerHTML+= `<p class='error'>${elem}</p>`;
+            }
         }
     }
 }

@@ -10,7 +10,7 @@ body{
     background-color: white;
     border-style: solid;
     border-width: 4px;
-    border-radius: 10%;
+    border-radius: 1vw;
     font-size: large;
     top: calc(50vh - 199px);
     left: calc(50vw - 224px);

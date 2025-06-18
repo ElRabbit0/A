@@ -3,9 +3,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/search.css">
     <title>Search</title>
 </head>
 <body>
-    
+    <div id="result-form">
+        <h1>Найдётся всё!</h1>
+        <div id="search-form">
+            <p>Страна и город: <input type="text" placeholder="Введите город и страну..."></p>
+            <p>Заезд: <input type="date"></p>
+            <p>Выезд: <input type="date"></p>
+            <p>Количество гостей: <input style="width: 40px;" type="number" min="1" placeholder="..."></p>
+            <button class="func-button">Найти!</button>
+        </div>
+        <div id="filter">
+            <h2 class="fill">Фильтры</h2>
+            <div id="options">
+                <div class="sort">
+                    <label for="price-filter">Цена за ночь</label>
+                    <input type="number" id="price-filter" placeholder="Цена...">
+                    <label for="type-filter">Тип размещения</label>
+                    <select name="type" id="type-filter">
+                        <option value="">Внутри</option>
+                        <option value="">Снаружи</option>
+                    </select>
+                    <label for="location-filter">Расположение</label>
+                    <select name="location" id="location-filter">
+                        <option value="">В центре</option>
+                        <option value="">До 1км от центра</option>
+                        <option value="">1км от центра</option>
+                        <option value="">10 км от центра</option>
+                        <option value="">На луне</option>
+                    </select>
+                    <label for="service-filter">Услуги</label>
+                    <select name="services" id="service-filter">
+                        <option value="">Еда</option>
+                        <option value="">Wi-fi</option>
+                    </select>
+                    <label for="location-filter">Особенности размещения</label>
+                    <select name="peculiarities" id="">
+                        <option value="">На кровате</option>
+                        <option value="">Под кроватью</option>
+                        <option value="">Рядом с кроватью</option>
+                        <option value="">Без кровати</option>
+                    </select>
+                    <label for="location-filter">Питание</label>
+                    <select name="food" id="">
+                        <option value="">Еда</option>
+                        <option value="">Еда</option>
+                        <option value="">Еда</option>
+                        <option value="">Еда</option>
+                    </select>
+                    <label for="location-filter">Звёзд</label>
+                    <select name="stars" id="">
+                        <option value="1">★☆☆☆☆</option>
+                        <option value="2">★★☆☆☆</option>
+                        <option value="3">★★★☆☆</option>
+                        <option value="4">★★★★☆</option>
+                        <option value="5">★★★★★</option>
+                    </select>
+                    <label for="location-filter">Рейтинг</label>
+                    <select name="raiting" id="">
+                        <option value="">0</option>
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                        <option value="">4</option>
+                        <option value="">5</option>
+                        <option value="">6</option>
+                        <option value="">7</option>
+                        <option value="">8</option>
+                        <option value="">9</option>
+                        <option value="">10</option>
+                    </select>
+                </div>
+                <div id="buttons">
+                    <div id="favorite">
+                        <input type="checkbox">
+                        <span>Избранное</span>
+                    </div>
+                    <div id="type">
+                        <button><img src="../img/list-icon.png" alt=""></button>
+                        <button><img src="../img/map-icon.png" alt=""></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="list">
+            <h3 class="res">Результат поиска</h3>
+            <div class="node">
+                <div class="node-img">
+                    <img src="../pictures/top-ten/fufel.jpg" alt="">
+                </div>
+                <div class="node-info">
+                    <h3>Башня Фуфелшмерца</h3>
+                    <p class="address"><b>Локация: </b>США, Денвиль, Центр</p>
+                    <p class="address"><b>Адрес: </b>Центр 23, Денвиль</p>
+                    <p><b>Удалённость: </b>0.1км от центра</p>
+                    <p><b>Телефон: </b><span>8 888 888 88 88</span></p>
+                    <p><b>Цена: </b>от 1 шарика</p>
+                    <p><b>Информация: </b>взрывы, ручной утконос, робот дворецкий.</p>
+                    <p><b>Звёзд: </b>★★★★★</p>
+                    <p><b>Рейтинг: </b> 9.1/10</p>
+                </div>
+                <div class="node-icons">
+                    <img src="../img/icons_for_hotel/bed-icon.png" alt="">
+                    <img src="../img/icons_for_hotel/food-icon.png" alt="">
+                    <img src="../img/icons_for_hotel/wifi-icon.png" alt="">
+                </div>
+                <div class="node-buttons">
+                    <button class="func-button">
+                        Выбрать номер
+                    </button>
+                </div>
+            </div>
+            <div class="node">
+                <div class="node-img">
+                    <img src="../pictures/top-ten/fufel.jpg" alt="">
+                </div>
+                <div class="node-info">
+                    <h3>Башня Фуфелшмерца</h3>
+                    <p class="address"><b>Локация: </b>США, Денвиль, Центр</p>
+                    <p class="address"><b>Адрес: </b>Центр 23, Денвиль</p>
+                    <p><b>Удалённость: </b>0.1км от центра</p>
+                    <p><b>Телефон: </b><span>8 888 888 88 88</span></p>
+                    <p><b>Цена: </b>от 1 шарика</p>
+                    <p><b>Информация: </b>взрывы, ручной утконос, робот дворецкий.</p>
+                    <p><b>Звёзд: </b>★★★★★</p>
+                    <p><b>Рейтинг: </b> 9.1/10</p>
+                </div>
+                <div class="node-icons">
+                    <img src="../img/icons_for_hotel/bed-icon.png" alt="">
+                    <img src="../img/icons_for_hotel/food-icon.png" alt="">
+                    <img src="../img/icons_for_hotel/wifi-icon.png" alt="">
+                </div>
+                <div class="node-buttons">
+                    <button class="func-button">
+                        Выбрать номер
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="page-number">
+            <span>Страницы: </span>
+            <a>1</a>
+            <a href="">2</a>
+            <a href="">3</a>
+            <a href="">4</a>
+            <a href="">5</a>
+            <a href="">6</a>
+        </div>
+    </div>
 </body>
 </html>

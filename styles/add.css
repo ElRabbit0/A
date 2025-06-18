@@ -1,0 +1,155 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(236, 236, 236);
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.go-button:hover{
+    filter: brightness(0.9);
+    cursor: pointer;
+}
+.go-button:active{
+    filter: brightness(1)
+}
+#form{
+    position: absolute;
+    padding: 20px;
+    background-color: white;
+    border-style: solid;
+    border-width: 4px;
+    border-radius: 1vw;
+    font-size: large;
+    display: flex;
+    flex-direction: column;
+    top: 12px;
+}
+#form p{
+    margin: 20px 0 10px 0;
+    font-size: 24px;
+}
+#form .red{
+    display: inline;
+    color: red;
+}
+#form input:not([type=file]){
+    height: 30px;
+    font-size: 24px;
+}
+#form input:hover:not([type=file]){
+    border-style: solid;
+    background-color: rgba(127, 255, 212, 0.274);
+}
+#form input:focus:not([type=file]){
+    outline-color: aquamarine;
+    background-color: rgba(127, 255, 212, 0.274);
+}
+#form h2{
+    text-align: center;
+}
+#input-file{
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+}
+.input-file-button{
+    display: flex;
+    font-size: 20px;
+    cursor: pointer;
+}
+.input-file-button:hover{
+    text-decoration: underline;
+    text-decoration-color: aquamarine;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 4px;
+}
+.input-file-icon img{
+    width: 22px;
+}
+#file-list{
+    border-width: 2px;
+    border-color: aquamarine;
+    border-style: solid;
+    margin-top: 8px;
+    padding: 4px 4px 0 4px;
+}
+#file-list p{
+    font-size: 20px;
+    height: 30px;
+    margin: 0;
+    margin-top: 4px;
+    cursor: pointer;
+}
+#file-list p:hover{
+    text-decoration: underline;
+    text-decoration-color: aquamarine;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 4px;
+}
+#stars-select{
+    height: 30px;
+    font-size: 24px;
+}
+#stars-select:focus{
+    outline-color: aquamarine;
+    border-color: aquamarine;
+}
+#stars-select:hover{
+    border-style: solid;
+    border-color: aquamarine;
+}
+#access-form{
+    display: flex;
+    align-items: center;
+}
+.required-field-checkbox[type="checkbox"]{
+    accent-color: aquamarine;
+    align-self: center;
+    margin-top: 16px;
+    padding: 0;
+}
+#continue{
+    display: flex;
+    justify-content: center;
+}
+.continue-button{
+    height: 32px;
+    border-style: solid;
+    border-radius: 1vw;
+    border-color: aquamarine;
+    border-width: 2px;
+    font-size: 20px;
+    background-color: rgba(127, 255, 212, 0.274);
+    padding: 2px 16px;
+    opacity: 0.5;
+}
+.go-button{
+    opacity: 1;
+}
+#message{
+    position: fixed;
+    z-index: 100;
+    text-align: center;
+}
+.good-message,
+.error-message{
+    padding: 8px 32px;
+    border-radius: 1vw;
+    animation-name: message;
+    animation-delay: 2s;
+    animation-duration: 3s;
+    animation-fill-mode:forwards;
+}
+.good-message{
+    background-color: rgba(0, 128, 0, 0.8);
+}
+.error-message{
+    background-color: rgba(255, 0, 0, 0.8);
+}
+
+@keyframes message{
+    to{
+        opacity: 0;
+        display: none;
+    }
+}

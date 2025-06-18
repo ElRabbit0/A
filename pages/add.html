@@ -3,9 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/add.css">
     <title>Add</title>
 </head>
 <body>
-    
+    <div id="message"></div>
+    <div id="form">
+        <h2>Добавить информацию</h2>
+        <div id="information-form">
+            <div id="text-information">
+                <p><span class="red">*</span>Телефон:</p>
+                <input type="tel" placeholder="Телефон..." class="main">
+                <p><span class="red">*</span>Почта:</p>
+                <input type="email" placeholder="Почта..." class="main">
+                <p><span class="red">*</span>Юр. данные:</p>
+                <input type="text" placeholder="Данные..." class="main">
+                <p>Доп. информация:</p>
+                <input type="text" placeholder="Информация...">
+                <p><span class="red">*</span>Расположение:</p>
+                <div id="location-form">
+                    <input type="text" placeholder="Страна..." class="main">
+                    <input type="text" placeholder="Город..." class="main">
+                    <input type="text" placeholder="Район..." class="main">
+                </div>
+                <p><span class="red">*</span>Вид отеля:</p>
+                <input type="text" placeholder="Вид..." class="main">
+                <p>Удобства:</p>
+                <input type="text" placeholder="Удобства...">
+            </div>
+            <div id="items-information">
+                <div id="img-form">
+                    <p><span class="red">*</span>Фотографии:</p>
+                    <input type="file" id="input-file" accept="image/*" multiple>
+                    <label for="input-file" class="input-file-button">
+                        <span class="input-file-button-text">Выберите файл</span>
+                        <span class="input-file-icon"><img src="../img/add-icon.png"></span>
+                    </label>
+                    <div id="file-list">
+                        <p class="file-node">Файл не выбран</p>
+                        <p class="file-node">Файл не выбран</p>
+                        <p class="file-node">Файл не выбран</p>
+                    </div>
+                </div>
+                <div id="stars-form">
+                    <p><span class="red">*</span>Звёзды:</p>
+                    <select name="stars" id="stars-select">
+                        <option value=""></option>
+                        <option value="1">★☆☆☆☆</option>
+                        <option value="2">★★☆☆☆</option>
+                        <option value="3">★★★☆☆</option>
+                        <option value="4">★★★★☆</option>
+                        <option value="5">★★★★★</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div id="password-form">
+            <div id="password-input">
+                <p><span class="red">*</span>Пароль:</p>
+                <input type="password" placeholder="Пароль..." class="main" id="password">
+            </div>
+            <div id="password-repeat">
+                <p><span class="red">*</span>Подтверждение пароля:</p>
+                <input type="password" placeholder="Тот же пароль..." class="main" id="passwordRet">
+            </div>
+        </div>
+        <div id="access-form">
+            <p class="access"><span class="red">*</span>Подтверждение на обработку персональных данных</p>
+            <input class="required-field-checkbox" type="checkbox">
+        </div>
+        <div id="continue">
+            <button class="continue-button">
+                Продолжить
+            </button>
+        </div>
+    </div>
+    <script src="../scripts/add.js"></script>
 </body>
 </html>
