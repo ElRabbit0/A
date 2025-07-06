@@ -46,6 +46,11 @@ body{
 }
 #form h2{
     text-align: center;
+    width: 100%;
+    text-decoration: underline;
+    text-decoration-color: aquamarine;
+    text-underline-offset: 8px;
+    text-decoration-thickness: 4px;
 }
 #input-file{
     opacity: 0;

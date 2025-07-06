@@ -34,9 +34,6 @@
                 </div>
         </div>
     </header>
-    <header id="main-header-mobile">
-
-    </header>
     <div id="content">
         <div class="element" id="fast-search">
             <h1>Наиболее быстрый поиск из всех возможных!</h1>
@@ -51,15 +48,18 @@
                 </datalist>
             </div>
         </div>
+        <div class="element" id="search-form">
+            <h1>Заморочиться с поиском!</h1>
+            <button class="func-button">Найти!</button>
+            <p>Страна и город: <input type="text" placeholder="Введите город и страну..."></p>
+            <p>Заезд: <input type="date"></p>
+            <p>Выезд: <input type="date"></p>
+            <p>Количество гостей: <input style="width: 40px;" type="number" min="1" placeholder="..."></p>
+        </div>
+        <div class="element" id="change-div">
+            <p>↑<button class="func-button" id="change-but">Другой способ</button>↑</p>
+        </div>
         <div class="element" id="place">
-            <div id="search-form">
-                <h1>Заморочиться с поиском!</h1>
-                <button class="func-button">Найти!</button>
-                <p>Страна и город: <input type="text" placeholder="Введите город и страну..."></p>
-                <p>Заезд: <input type="date"></p>
-                <p>Выезд: <input type="date"></p>
-                <p>Количество гостей: <input style="width: 40px;" type="number" min="1" placeholder="..."></p>
-            </div>
             <div id="image-content">
                 <h1>Топ 10 отелей России!</h1>
                 <div id="slider">
@@ -273,5 +273,6 @@
         </div>
     </div>
     <script src="./scripts/slider.js"></script>
+    <script src="./scripts/search-change.js"></script>
 </body>
 </html>

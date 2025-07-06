@@ -1,0 +1,102 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(236, 236, 236);
+    display: flex;
+    justify-content: center;
+}
+#form{
+    width: calc(96vw - 40px);
+    background-color: white;
+    border-style: solid;
+    border-width: 4px;
+    border-radius: 1vw;
+    font-size: large;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+h1{
+    text-align: center;
+}
+p{
+    font-size: larger;
+}
+h3{
+    font-size: x-large;
+}
+.node{
+    margin: 30px 20px;
+    border-width: 4px;
+    border-color: black;
+    border-style: solid;
+    border-radius: 1vw;
+    overflow: hidden;
+}
+.node h3{
+    text-align: center;
+    margin: 20px 0;
+    
+}
+.node .node-img{
+    text-align: center;
+    background-color: rgb(236, 236, 236);
+    height: 40vh;
+    border-bottom-style: solid;
+    border-bottom-color: aquamarine;
+    border-bottom-width: 4px;
+}
+.node-img img{
+    height: 40vh;
+}
+.node-info{
+    border-top-style: solid;
+    border-top-color: aquamarine;
+    border-top-width: 4px;
+}
+.node-info,
+.user-info{
+    padding: 0 4px;
+}
+.user-info{
+    border-top-style: solid;
+    border-top-color: aquamarine;
+    border-top-width: 4px;
+}
+.node-buttons{
+    border-top-style: solid;
+    border-top-color: aquamarine;
+    border-top-width: 4px;
+    text-align: center;
+    padding: 20px 0;
+}
+.func-select{
+    height: 40px;
+    width: 100%;
+    text-align: center;
+    font-size: larger;
+}
+.func-select:hover{
+    border-style: solid;
+    background-color: rgba(127, 255, 212, 0.274);
+}
+.func-select option{
+    color: black;
+}
+.stars{
+    color: rgb(146, 146, 0);
+}
+@media (max-width: 768px){
+    b{
+        display: block;
+    }
+    .node-img{
+        height: 60%;
+        display: flex;
+        justify-items: center;
+        align-items: center;
+    }
+    .node-img img{
+        height: 90%;
+        margin: -45%;
+    }
+}

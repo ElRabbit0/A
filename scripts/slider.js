@@ -14,35 +14,25 @@ function goToSlide(newIndex){
     if(newIndex < 0)
     {
         index = slides.length - 1;
-        slides[index-1].className+= ' ' + 'first-slide'
-        slides[index].className+= ' ' + 'second-slide'
-        slides[0].className+= ' ' + 'third-slide'
+        slides[index].className+= ' ' + 'main-slide';
     }
     else if(newIndex > slides.length - 1)
     {
         index = 0;
-        slides[slides.length - 1].className+= ' ' + 'first-slide'
-        slides[index].className+= ' ' + 'second-slide'
-        slides[index+1].className+= ' ' + 'third-slide'
+        slides[index].className+= ' ' + 'main-slide';
     }
     else{
         index = newIndex;
         if(index == 0)
         {
-            slides[slides.length - 1].className+= ' ' + 'first-slide'
-            slides[index].className+= ' ' + 'second-slide'
-            slides[index+1].className+= ' ' + 'third-slide'
+            slides[index].className+= ' ' + 'main-slide';
         }
         else if(index == slides.length-1)
         {
-            slides[index-1].className+= ' ' + 'first-slide'
-            slides[index].className+= ' ' + 'second-slide'
-            slides[0].className+= ' ' + 'third-slide'
+            slides[index].className+= ' ' + 'main-slide';
         }
         else{
-            slides[index-1].className+= ' ' + 'first-slide'
-            slides[index].className+= ' ' + 'second-slide'
-            slides[index+1].className+= ' ' + 'third-slide'
+            slides[index].className+= ' ' + 'main-slide';
         }
     }
     counter.innerHTML = ' ';
