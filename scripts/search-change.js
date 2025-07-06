@@ -14,11 +14,11 @@ function change(){
     if(!fastForm){
         fast.style.display = 'none';
         notFast.style.display = 'block';
-        fastForm = false;
+        fastForm = true;
     }
     else{
         fast.style.display = 'grid';
         notFast.style.display = 'none';
-        fastForm = true;
+        fastForm = false;
     }
 }
