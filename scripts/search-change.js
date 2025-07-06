@@ -11,7 +11,7 @@ changeButton.addEventListener('click', ()=>{
 });
 
 function change(){
-    if(fastForm){
+    if(!fastForm){
         fast.style.display = 'none';
         notFast.style.display = 'block';
         fastForm = false;
